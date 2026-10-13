@@ -1,0 +1,20 @@
+.link-interactivo {
+  color: $color-primario;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: $transicion-suave;
+
+  &:hover,
+  &:focus {
+    color: $color-secundario;
+    transform: scale(1.1) translateX(5px);
+  }
+
+  &:active {
+    color: $color-fondo-header;
+    background-color: $color-primario;
+    padding: 2px 5px;
+    border-radius: 5px;
+  }
+}

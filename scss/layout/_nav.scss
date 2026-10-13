@@ -1,0 +1,37 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+  }
+}
+
+.navbar-nav.menu {
+  .nav-link {
+    color: $color-primario !important;
+    background-color: $color-blanco !important;
+    border-radius: $radio-borde-boton;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    font-weight: bold !important;
+    transition: $transicion-suave;
+
+    &:hover,
+    &:focus {
+      color: $color-blanco !important;
+      background-color: $color-primario !important;
+      transform: scale(1.05);
+      outline: none;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}

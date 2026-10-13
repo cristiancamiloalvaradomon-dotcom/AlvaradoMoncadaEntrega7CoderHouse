@@ -1,0 +1,76 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  text-align: left;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.contenedor-inicio {
+  grid-template-areas:
+    "presentacion"
+    "eleccion"
+    "consulta";
+}
+
+.contenedor-historia {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.historia,
+.valores,
+.instalaciones {
+  background-color: $color-fondo-seccion;
+  padding: 30px;
+  border-radius: $radio-borde-base;
+  width: 100%;
+}
+
+.historia {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fotos-espacios {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+}
+
+.interactivo {
+  transition: $transicion-suave;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(13, 71, 161, 0.2);
+  }
+
+  &:focus {
+    border: 2px solid $color-primario;
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
